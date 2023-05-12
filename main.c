@@ -1,7 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h> 
 #include<time.h>
-#iinclude<math.h>
+#include<math.h>
+typedef struct {
+  int ** coordonees;
+  int etat;
+}Pion;
+
+typedef struct {
+  int pion;
+  int couleur;
+} Case;
 
 
 
