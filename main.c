@@ -1,22 +1,15 @@
-#include<stdio.h>
-#include<stdlib.h> 
-#include<time.h>
-#include<math.h>
-typedef struct {
-  int ** coordonees;
-  int etat;
-}Pion;
+#include"move.h"
+#include"ini.h"
+#include "cy-color.h"
 
-typedef struct {
-  int pion;
-  int couleur;
-} Case;
-
-
-
-
-
-
-int main(){
-  
+int main() {
+  char* text;
+ // cycolor();
+    Pion color[ROWS][COWS];
+    initialisation(color);
+    affiche(color);
+    
+    move(color);
+    
+    return 0;
 }
