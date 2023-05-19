@@ -7,10 +7,10 @@ void move(Pion colors[ROWS][ROWS]){
 do{
   
   do{
-      printf("\nentrer les coordonnées du       pion à déplacer : \n");
+      printf("\nentrer les coordonnées du pion à déplacer : \n");
     scanf("%d %d", &x, &y);
     
-  printf("entrer les nouvelles coordonnées ");
+  printf("entrer les nouvelles coordonnées :\n ");
   scanf("%d %d", &a, &b);
   
     printf( "\033[0;0H\033[2J");
