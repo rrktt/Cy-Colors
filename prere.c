@@ -2,7 +2,7 @@
 //#include "ini.h"
 
 void affiche(Pion colors[ROWS][ROWS]){/*selon la valeur de p chaque case possèdera un élém
-   ent iniial ( de 0-7 les pions de la première ligne, de 8-15 les pions de la dernière ligne, 16 c'est vide, 17 pion promue du haut et 18 pion promue du bas))*/
+   ent  ( de 0-7 les pions de la première ligne, de 8-15 les pions de la dernière ligne, 16 c'est vide, 17 pion promue du haut et 18 pion promue du bas))*/
 int val=40;
 int val2=47;
    for(int i=0;i<ROWS;i++){
