@@ -1,7 +1,8 @@
 #include"prere.h"
 //#include "ini.h"
 
-void affiche(Pion colors[ROWS][ROWS]){
+void affiche(Pion colors[ROWS][ROWS]){/*selon la valeur de p chaque case possèdera un élém
+   ent iniial ( de 0-7 les pions de la première ligne, de 8-15 les pions de la dernière ligne, 16 c'est vide, 17 pion promue du haut et 18 pion promue du bas))*/
 int val=40;
 int val2=47;
    for(int i=0;i<ROWS;i++){
@@ -68,8 +69,8 @@ int val2=47;
    }
 }
     for(int j=0; j<ROWS; j++){
-      printf("\033[%dm",val);
-      printf("%s",colors[0][j].type);
+      printf("\033[%dm",val);//affiche l'arriere plan
+      printf("%s",colors[0][j].type);//affiche la première ligne du tableau
       Coul("0");
       val++;
     }
@@ -77,7 +78,7 @@ int val2=47;
    
     for(int i=1; i<ROWS-1; i++){
       for(int j=0; j<ROWS; j++){
-          printf("\033[%dm",colors[i][j].background);
+       printf("\033[%dm",colors[i][j].background);//affiche l'arriere plan
     printf("%s",colors[i][j].type);
         
     }
@@ -86,9 +87,9 @@ int val2=47;
 
 
     for(int j=0; j<ROWS; j++){
-      printf("\033[%dm",val2);
-      printf("\033[%dm",val2-10);
-      printf("%s",colors[7][j].type);
+      printf("\033[%dm",val2);//affiche l'arriere plan
+     // printf("\033[%dm",val2-10);//permet de modifier la couleur du symboles en fonction de la couleur de fond
+      printf("%s",colors[7][j].type);//affiche la dernière ligne du tableau
       Coul("0");
       val2--;
     }
