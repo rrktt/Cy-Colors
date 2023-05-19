@@ -2,7 +2,7 @@
 
 int** valcoul(){
   int** valcoul=NULL;
-  valcoul=malloc(sizeof(int*)*8);
+  valcoul=malloc(sizeof(int*)*8);// tableau conteanant les correspondance ANSI des couleurs d'arrière plan des cases intermédiaires entre la premère ligne et la dernière ligne
    for (int i = 1; i < ROWS-1; i++) {
         valcoul[i] = malloc(8* sizeof(int));
     }
