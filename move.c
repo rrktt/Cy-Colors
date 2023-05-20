@@ -1,18 +1,21 @@
 #include"move.h"
 //#include"prere.h"
 #include<stdio.h>
+void vide_buffer(){
+  while(getchar()!='\n'){}
+}
 void move(Pion colors[ROWS][ROWS]){
-  int x, y, a, b;
+  int x, y, a, b, verif, verif0;
   
 do{
   
   do{
       printf("\nentrer les coordonnées du pion à déplacer : \n");
-    scanf("%d %d", &x, &y);
-    
+    verif=scanf("%d %d", &x, &y);
+    vide_buffer();
   printf("entrer les nouvelles coordonnées :\n ");
-  scanf("%d %d", &a, &b);
-  
+    verif0=scanf("%d %d", &a, &b);
+    vide_buffer();
     printf( "\033[0;0H\033[2J");// permet d'effacer le contenu du terminal¿
       colors[a][b].p=colors[x][y].p;// remplace la valeur de la deuxième case sélèctionner par celle de la première 
      colors[x][y].p=16;//remplace la valeur de la première case par un vide
