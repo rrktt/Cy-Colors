@@ -1,13 +1,13 @@
 all: main
-accueil.o: accueil.h accueil.c
+accueil.o: lib.h accueil.h accueil.c
 	gcc -c accueil.c -o accueil.o
-ini.o: ini.h ini.c
+ini.o: lib.h ini.h ini.c
 	gcc -c ini.c -o ini.o
-move.o:	move.h move.o
+move.o:	lib.h move.h move.o
 	gcc -c move.c -o move.o
-prere.o : prere.h prere.c
+prere.o : lib.h prere.h prere.c
 	gcc -c prere.c -o prere.o
-valcoul.c : valcoul.h valcoul.c
+valcoul.c : lib.h valcoul.h valcoul.c
 	gcc -c valvoucl.c -o valcoul.o
 main.o :
 	gcc -c main.c -o main.o
