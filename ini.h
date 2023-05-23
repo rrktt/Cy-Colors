@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include<unistd.h>
+#include"lib.h"
 #define ROWS 8
 #define COWS 8
 #include "struct.h"
