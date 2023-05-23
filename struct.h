@@ -1,6 +1,6 @@
 #ifndef STRUCT_H
 #define STRUCT_H
-#include <stdbool.h>
+#include"lib.h"
 typedef struct{
 int color ;// utilité non démontré
 int background ;
