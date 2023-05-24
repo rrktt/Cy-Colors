@@ -1,6 +1,6 @@
-#include"move.h"
-//#include"prere.h"
-#include<stdio.h>
+#include "move.h"
+//#include "prere.h"
+#include <stdio.h>
 
 void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
 int a,b,f,g, b2,;
