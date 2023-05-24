@@ -1,4 +1,4 @@
-#include"lib.h"
+#include "lib.h"
 #define ROWS 8
 #define COWS 8
 #include "struct.h"
