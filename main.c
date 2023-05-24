@@ -1,5 +1,5 @@
-#include"move.h"
-#include"ini.h"
+#include "move.h"
+#include "ini.h"
 #include "cy-color.h"
 
 int main() {
