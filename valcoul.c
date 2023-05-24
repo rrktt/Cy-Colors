@@ -1,4 +1,4 @@
-#include"valcoul.h"
+#include "valcoul.h"
 
 int** valcoul(){
   int** valcoul=NULL;
