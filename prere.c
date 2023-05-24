@@ -1,4 +1,4 @@
-#include"prere.h"
+#include "prere.h"
 //#include "ini.h"
 
 void affiche(Pion colors[ROWS][ROWS]){/*selon la valeur de p chaque case possèdera un élém
