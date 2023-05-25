@@ -1,4 +1,4 @@
-all: exec
+all: main
 main.o: lib.h main.c ini.h move.h cy-color.h accueil.h
 	gcc -c main.c -o main.o
 ini.o: lib.h ini.c ini.h
@@ -11,5 +11,5 @@ valcoul.o: lib.h valcoul.c valcoul.h
 	gcc -c valcoul.c -o valcoul.o
 acccueil.o: lib.h accueil.c accueil.h
 	gcc -c accueil.c -o accueil.o
-exec: main.o ini.o move.o prere.o valcoul.o accueil.o 
-	gcc main.o ini.o move.o prere.o valcoul.o accueil.o -o exec
+main: main.o ini.o move.o prere.o valcoul.o accueil.o 
+	gcc main.o ini.o move.o prere.o valcoul.o accueil.o -o main
