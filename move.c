@@ -39,7 +39,7 @@ void move( Pion colors[ROWS][ROWS]){
     scanf("%d %d", &x, &y);
     while(y!=0){
       printf("\nIl n'y a pas de pion ici!!\n");
-      scanf("%d %d",&x &y);
+      scanf("%d %d",&x, &y);
     }
   printf("entrer les nouvelles coordonnées ");
   scanf("%d %d", &a, &b);
