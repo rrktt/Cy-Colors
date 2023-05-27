@@ -75,7 +75,7 @@ void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
  }
       *a1=f; 
       *a2=g;
-      fin=fin_de_partie(score, score1, block, block1,  psp, color)
+      fin=fin_de_partie(score, score1, block, block1,  psp, color);
 } while (fin == 3 || fin == 2);
 if(fin==3){
   printf("c'est le joueur 2 qui gagne %d", score);
