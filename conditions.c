@@ -1,5 +1,5 @@
 #include"conditions.h"
-void conditions2(int* a,int*b, int i, int j){ //Les condition pour les deux joueurs ne sont pas les mêmes car ils ne partent pas du même côté 
+void conditions2(int* a,int*b, int i, int j){ //Les conditions pour les deux joueurs ne sont pas les mêmes car ils ne partent pas du même côté 
   int verif;
   printf("\n%d %d\n",i,j);
   
