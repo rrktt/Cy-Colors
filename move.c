@@ -8,7 +8,7 @@ int a,b,f,g, b2;
 int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1, fin;
   
 
-}while(ver!=0);
+
   for(int i=0; i<ROWS; i++){
     for(int j=0; j<ROWS; j++){
     if(colors[i][j].background==colors[*a1][*a2].background && colors[i][j].p<16 && colors[i][j].p>7){
@@ -17,6 +17,7 @@ int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1, fin;
         do{
     printf("\nTour du joueur 2\nentrer les nouvelles coordonnées de (%d %d) \n", i, j);
   ver=scanf("%d %d", &a, &b); 
+          }while(ver!=0);
           choisirPion(&i, &j, &a, &b, Pion colors[ROWS][ROWS]);
       if(obs=0);/*(colors[i-1][j-1].p != 16) && (colors[i][j-1].p !=16) && (colors[i+1][j-1].p != 16)*/){
         printf("\n Vous ne pouvez pas vous déplacer\n");
