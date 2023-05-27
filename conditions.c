@@ -3,7 +3,7 @@ void conditions2(int* a,int*b, int i, int j){ //Les conditions pour les deux jou
   int verif;
   printf("\n%d %d\n",i,j);
   
-  while(*b == j && *a== i){//Compare les coordonèes à la position précédente 
+  while(*b == j && *a== i){//Compare les coordonées à la position précédente 
           printf("\nVous ne pouvez pas rester immobile!!!\n");
          do{
            verif=scanf("%d %d",a,b);
@@ -20,7 +20,7 @@ void conditions2(int* a,int*b, int i, int j){ //Les conditions pour les deux jou
       conditions2(a, b, i, j);
     }
       while((i-*(a))<0){//Vérifie si le pion avance bien vers l'avant
-        printf("\n vous ne pouvez seulement aveancer vers l'avant!!!\n");
+        printf("\n Vous ne pouvez seulement aveancer vers l'avant!!!\n");
         do{
           verif=scanf("%d %d",a,b);
   vide_buffer();
@@ -60,7 +60,7 @@ void conditions1(int* f,int*g, int i, int j ){
       conditions1(f,g,i,j );
     }
       while((*(f)-i)<0){//Vérifie si le pion avance bien vers l'avant
-        printf("\n vous ne pouvez seulement aveancer vers l'avant!!!\n");
+        printf("\n Vous ne pouvez seulement aveancer vers l'avant!!!\n");
         do{
           verif=scanf("%d %d",f,g);
          vide_buffer();
