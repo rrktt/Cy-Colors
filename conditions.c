@@ -1,3 +1,4 @@
+#include"lib.h"
 void conditions2(int* a,int*b, int i, int j,int bp, int ap){
   printf("\n%d %d\n",i,j);
   
