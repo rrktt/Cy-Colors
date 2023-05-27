@@ -1,9 +1,9 @@
 #include"conditions.h"
-void conditions2(int* a,int*b, int i, int j){
+void conditions2(int* a,int*b, int i, int j){ //Les condition pour les deux joueurs ne sont pas les mêmes car ils ne partent pas du même côté 
   int verif;
   printf("\n%d %d\n",i,j);
   
-  while(*b == j && *a== i){
+  while(*b == j && *a== i){//Compare les coordonèes à la position précédente 
           printf("\nVous ne pouvez pas rester immobile!!!\n");
          do{
            verif=scanf("%d %d",a,b);
