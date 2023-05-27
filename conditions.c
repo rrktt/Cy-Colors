@@ -1,4 +1,6 @@
 void conditions2(int* a,int*b, int i, int j,int bp, int ap){
+  printf("\n%d %d\n",i,j);
+  
   while(*b == j && *a== i){
           printf("\nVous ne pouvez pas rester immobile!!!\n");
           scanf("%d %d",a,b);
@@ -25,6 +27,7 @@ void conditions2(int* a,int*b, int i, int j,int bp, int ap){
       }
 }
 void conditions1(int* f,int*g, int i, int j ){
+  printf("\n%d %d\n",i,j);
   while(*g == j && *f== i){
           printf("\nVous ne pouvez pas rester immobile!!!\n");
           scanf("%d %d",f,g);

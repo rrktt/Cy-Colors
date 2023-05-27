@@ -4,6 +4,7 @@
 
 void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
 int a,b,f,g, b2;
+  int score1=0,score2=0,manche = 0;
 int v=1,ap,bp,fp,gp;
   do{
 
@@ -19,12 +20,17 @@ int v=1,ap,bp,fp,gp;
       else {
         conditions2(&a,&b,i,j);
       }
+      /*if(a==0){
+        printf("\nLe joueur 2 à remporter la manche\n");
+        score2++;
+        manche=1;*/
+      }
       colors[a][b].p=colors[i][j].p;
      colors[i][j].p=16;
   affiche(colors);
     } 
     }
-    }*a1=a; *a2=b;
+    *a1=a; *a2=b;
     ap = a; bp =b;
         printf("\nTout du joueur 1\nentrer les nouvelles coordonnées \n");
   scanf("%d %d", &f, &g);
@@ -37,6 +43,10 @@ int v=1,ap,bp,fp,gp;
       else {
       conditions1(&f,&g,i,j );
       }
+      /* if(f==7){
+        printf("\nLe joueur 1 à remporter la manche\n");
+        score1++;
+        manche=1;*/
       colors[f][g].p=colors[i][j].p;
      colors[i][j].p=16;
   affiche(colors);
