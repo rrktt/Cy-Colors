@@ -1,5 +1,5 @@
 all: main
-main.o: lib.h main.c ini.h move.h cy-color.h accueil.h
+main.o: lib.h main.c ini.h move.h accueil.h
 	gcc -c main.c -o main.o
 ini.o: lib.h ini.c ini.h
 	gcc -c ini.c -o ini.o 
