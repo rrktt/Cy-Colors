@@ -4,25 +4,53 @@
 
 void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
 int a,b,f,g, b2;
-int v=1;
+int v=1,ap,bp,fp,gp;
   do{
 
-    printf("\nentrer les nouvelles coordonnées \n");
+    printf("\nTour du joueur 2\nentrer les nouvelles coordonnées \n");
   scanf("%d %d", &a, &b);
+    while(a<0 || b<0 || a>7 || b>7){//Vérifie si le pion ne sort pas des limites du plateau
+      printf("\n Vous ne pouvez pas sortir du plateau !!!");
+      scanf("%d %d", &a,&b);
+    }
   for(int i=0; i<ROWS; i++){
     for(int j=0; j<ROWS; j++){
     if(colors[i][j].background==colors[*a1][*a2].background && colors[i][j].p<16 && colors[i][j].p>7){
+      while((i-a)<0){
+        printf("\n vous ne pouvez seulement aveancer vers l'avant!!!\n");
+        scanf("%d %d", &a,&b);
+      }
+      if((i-a)/(j-b)!=0){
+        while((i-a)/(j-b)!=1){
+          printf("\n Vous ne pouvez pas vous déplacer comme ceci!!!\n");
+          scanf("%d %d",&a ,&b);
+        }
+      }
       colors[a][b].p=colors[i][j].p;
      colors[i][j].p=16;
   affiche(colors);
     } 
     }
   }*a1=a; *a2=b;
-        printf("\nentrer les nouvelles coordonnées \n");
+        printf("\nTout du joueur 1\nentrer les nouvelles coordonnées \n");
   scanf("%d %d", &f, &g);
+    while(f<0 || g<0 || f>7 || g>7){//Vérifie si le pion ne sort pas des limites du plateau
+      printf("\n Vous ne pouvez pas sortir du plateau !!!");
+      scanf("%d %d", &f,&g);
+    }
   for(int i=0; i<ROWS; i++){
     for(int j=0; j<ROWS; j++){
     if(colors[i][j].background==colors[*a1][*a2].background && colors[i][j].p<8 && colors[i][j].p>=0){
+      while((f-i)<0){
+        printf("\n vous ne pouvez seulement aveancer vers l'avant!!!\n");
+        scanf("%d %d", &a,&b);
+      }
+      if((f-i)/(b-j)!=0){
+        while((i-a)/(j-b)!=1){
+          printf("\n Vous ne pouvez pas vous déplacer comme ceci!!!\n");
+          scanf("%d %d",&a ,&b);
+        }
+      }
       colors[f][g].p=colors[i][j].p;
      colors[i][j].p=16;
   affiche(colors);
