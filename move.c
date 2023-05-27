@@ -5,15 +5,19 @@
 void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
 int a,b,f,g, b2;
   int score1=0,score2=0,manche = 0;
-int v=1,ap,bp,fp,gp;
+int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1;
   
 
-    printf("\nTour du joueur 2\nentrer les nouvelles coordonnées \n");
-  scanf("%d %d", &a, &b); 
+}while(ver!=0);
   for(int i=0; i<ROWS; i++){
     for(int j=0; j<ROWS; j++){
     if(colors[i][j].background==colors[*a1][*a2].background && colors[i][j].p<16 && colors[i][j].p>7){
-      if((colors[i-1][j-1].p != 16) && (colors[i][j-1].p !=16) && (colors[i+1][j-1].p != 16)){
+      obs=check_obstacles(i, j, *a, *b,  colors);
+      block=bloque1(&i,&j,  colors);
+        do{
+    printf("\nTour du joueur 2\nentrer les nouvelles coordonnées de (%d %d) \n", i, j);
+  ver=scanf("%d %d", &a, &b); 
+      if(obs=0);/*(colors[i-1][j-1].p != 16) && (colors[i][j-1].p !=16) && (colors[i+1][j-1].p != 16)*/){
         printf("\n Vous ne pouvez pas vous déplacer\n");
         b= bp; a=ap;
       }
@@ -32,12 +36,18 @@ int v=1,ap,bp,fp,gp;
     }
     *a1=a; *a2=b;
     ap = a; bp =b;
-        printf("\nTout du joueur 1\nentrer les nouvelles coordonnées \n");
-  scanf("%d %d", &f, &g);
+  
   for(int i=0; i<ROWS; i++){
     for(int j=0; j<ROWS; j++){
     if(colors[i][j].background==colors[*a1][*a2].background && colors[i][j].p<8 && colors[i][j].p>=0){
-       if((colors[i-1][j+1].p != 16) && (colors[i][j+i].p !=16) && (colors[i+1][j+1].p != 16)){
+        do{
+        printf("\nTout du joueur 1\nentrer les nouvelles coordonnées de (%d %d) \n", i, j);
+  scanf("%d %d", &f, &g);
+     ver1= vide_buffer();
+    }while(ver1!=2 );
+         block1=bloquer(&i, &j, colors);
+          obs=check_obstacles(i, j, *f, *g,  colors);
+       if(obs==0/*(colors[i-1][j+1].p != 16) && (colors[i][j+i].p !=16) && (colors[i+1][j+1].p != 16)*/){
         printf("\n Vous ne pouvez pas vous déplacer\n");
       }
       else {
@@ -75,6 +85,7 @@ void move0( Pion colors[ROWS][ROWS]){
   affiche(colors);
 do{
   move_total(&a, &b, colors);
+  
 }while();
 
 }
