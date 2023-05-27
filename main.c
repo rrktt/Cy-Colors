@@ -4,7 +4,7 @@
 #include "accueil.h"
 int main() {
   char* text;
-   //if(accueil()==1){
+   accueil();
  // cycolor();
     Pion color[ROWS][COWS];
     initialisation(color);

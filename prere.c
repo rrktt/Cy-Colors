@@ -80,7 +80,7 @@ int val2=47;
       for(int j=0; j<ROWS; j++){
        printf("\033[%dm",colors[i][j].background);//affiche l'arriere plan
     printf("%s",colors[i][j].type);
-        
+        Coul("0");
     }
       printf("\n");
   }
