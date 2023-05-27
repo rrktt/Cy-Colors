@@ -6,7 +6,7 @@ void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
 int a,b,f,g, b2;
   int score1=0,score2=0,manche = 0;
 int v=1,ap,bp,fp,gp;
-  do{
+  
 
     printf("\nTour du joueur 2\nentrer les nouvelles coordonnées \n");
   scanf("%d %d", &a, &b); 
@@ -53,11 +53,10 @@ int v=1,ap,bp,fp,gp;
     }
     }  }
     *a1=f; *a2=g;
-  }
-while(1/*colors[a][b].p>16 && colors[a][b].p<=8 || colors[a][b].p>8 && colors[a][b].p<0*/);
+
 }
   
-void move( Pion colors[ROWS][ROWS]){
+void move0( Pion colors[ROWS][ROWS]){
  int a, b;
   int x,y;
    printf("\nTour du joueur 1\nentrer les coordonnées du       pion à déplacer : \n");
@@ -74,9 +73,26 @@ void move( Pion colors[ROWS][ROWS]){
       colors[a][b].p=colors[x][y].p;
      colors[x][y].p=16;
   affiche(colors);
-
+do{
   move_total(&a, &b, colors);
-
+}while();
 
 }
 
+void move( Pion colors[ROWS][ROWS]){
+  int nmb_partie, *pspe, ver=1;
+  do{
+printf("entrer le nombre de parties\n");
+ver=scanf("%d", &nmb_partie);
+  vide_buffer();
+    }while(ver!=1 || nmb_partie<0);
+for(int i=0; i<nmb_partie; i++){
+  move0(colors, pspe);
+  for(int i=0; i<ROWS; i++){
+    for(int j=0; j<ROWS; j++){
+      if(colors[i][j].p==*pspe){
+  colors[i][j].promoted= true;}
+       initialisation(colors);
+  affiche(colors);
+    }}
+}
