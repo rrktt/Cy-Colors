@@ -88,7 +88,7 @@ void vide_buffer(){
 int condition( int r, int h, int m, int g){
 
 for(int i=1;i< 8; i++){
-
+// vérifie si le déplacement peut se faire dans les conditions normales
    if((m==r-i && (g==h+i || g==h-i || g==h))||m==r){
      return 1;
      }
@@ -98,7 +98,7 @@ for(int i=1;i< 8; i++){
 }
 
 int condition1( int r1, int h1, int m1, int g1){
-
+// vérifie si le déplacement peut se faire dans les conditions normales
 for(int i=1;i< 8; i++){
 
    if((m1==r1+i && (g1==h1+i || g1==h1-i || g1==h1))||m1==r1){
@@ -110,13 +110,13 @@ for(int i=1;i< 8; i++){
 }
 void choisirPion(int* x, int* y, int*a, int *b, Pion colors[ROWS][ROWS]) {
     int nbPions = 0, ver;
-    int indicesPions[8];
+    int indicesPions[8][8];
 
     // Parcours des pions sur la case (x, y) et comptage du nombre de pions présents
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < ROWS; j++) {
             if (colors[i][j].background==colors[*x][*y].background && colors[i][j].p<16 && colors[i][j].p>7 ) {
-                indicesPions[nbPions] = i;
+                indicesPions[i] = i;
                 nbPions++;
             }
         }
