@@ -54,6 +54,11 @@ void conditions1(int* f,int*g, int i, int j ){
       }
 }
 
+void vide_buffer(){
+  while (getchar()!='\n'){}
+}
+
+
 void choisirPion(int* x, int* y, int*a, int *b, Pion colors[ROWS][ROWS]) {
     int nbPions = 0, ver, *a,*b;
     int indicesPions[8];
