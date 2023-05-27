@@ -4,7 +4,7 @@
 #include "accueil.h"
 int main() {
   char* text;
-   accueil();
+   accueil();//Affiche l'accueil et reprend le programme lorsque l'utilisateur appui sur une touche
  // cycolor();
     Pion color[ROWS][COWS];
     initialisation(color);
