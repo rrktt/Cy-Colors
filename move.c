@@ -5,7 +5,7 @@
 void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
 int a,b,f,g, b2;
   int score1=0,score2=0,manche = 0;
-int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1;
+int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1, fin;
   
 
 }while(ver!=0);
@@ -17,6 +17,7 @@ int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1;
         do{
     printf("\nTour du joueur 2\nentrer les nouvelles coordonnées de (%d %d) \n", i, j);
   ver=scanf("%d %d", &a, &b); 
+          choisirPion(&i, &j, &a, &b, Pion colors[ROWS][ROWS]);
       if(obs=0);/*(colors[i-1][j-1].p != 16) && (colors[i][j-1].p !=16) && (colors[i+1][j-1].p != 16)*/){
         printf("\n Vous ne pouvez pas vous déplacer\n");
         b= bp; a=ap;
@@ -47,7 +48,9 @@ int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1;
     }while(ver1!=2 );
          block1=bloquer(&i, &j, colors);
           obs=check_obstacles(i, j, *f, *g,  colors);
+      choisirPion(&i, &j, &f, &g, Pion colors[ROWS][ROWS]);
        if(obs==0/*(colors[i-1][j+1].p != 16) && (colors[i][j+i].p !=16) && (colors[i+1][j+1].p != 16)*/){
+        
         printf("\n Vous ne pouvez pas vous déplacer\n");
       }
       else {
@@ -66,9 +69,9 @@ int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1;
 
 }
   
-void move0( Pion colors[ROWS][ROWS]){
+void move0( Pion colors[ROWS][ROWS], int* psp){
  int a, b;
-  int x,y;
+  int x,y,score, score;
    printf("\nTour du joueur 1\nentrer les coordonnées du       pion à déplacer : \n");
     scanf("%d %d", &x, &y);
     while(y!=0){
@@ -86,8 +89,15 @@ void move0( Pion colors[ROWS][ROWS]){
 do{
   move_total(&a, &b, colors);
   
-}while();
-
+ fin = fin_de_partie(&score, &score1, &block, &block1,psp, colors);
+    } while (fin == 3 || fin == 2);
+if(fin==3){
+  printf("c'est le joueur 2 qui gagne %d", score);
+  
+}
+  if(fin==2){
+  printf("c'est le joueur 1 qui gagne %d",score1);
+}
 }
 
 void move( Pion colors[ROWS][ROWS]){
@@ -102,8 +112,14 @@ for(int i=0; i<nmb_partie; i++){
   for(int i=0; i<ROWS; i++){
     for(int j=0; j<ROWS; j++){
       if(colors[i][j].p==*pspe){
-  colors[i][j].promoted= true;}
+  colors[i][j].promoted= true;
+        if(*pspe<8 && *pspe>=0){
+      colors[i][j].p=17;}
+        else{
+      colors[i][j].p=18; 
+    }
        initialisation(colors);
   affiche(colors);
-    }}
+    }
+    }
 }
