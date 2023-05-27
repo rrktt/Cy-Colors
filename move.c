@@ -48,7 +48,7 @@ void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
     for(int j=0; j<ROWS; j++){
       if(colors[i][j].background==colors[*a1][*a2].background && colors[i][j].p<8 && colors[i][j].p>=0){
          do{
-            printf("\nTout du joueur 1\nentrer les nouvelles coordonnées de (%d %d) \n", i, j);
+            printf("\nTour du joueur 1\nentrer les nouvelles coordonnées de (%d %d) \n", i, j);
             ver1= scanf("%d %d", &f, &g);
             vide_buffer();
             cond1=condition1( i, j, f, g);
