@@ -18,7 +18,7 @@ int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1, fin;
     printf("\nTour du joueur 2\nentrer les nouvelles coordonnées de (%d %d) \n", i, j);
   ver=scanf("%d %d", &a, &b); 
           }while(ver!=0);
-          choisirPion(&i, &j, &a, &b, Pion colors[ROWS][ROWS]);
+          choisirPion(&i, &j, &a, &b,  colors);
       if(obs=0);/*(colors[i-1][j-1].p != 16) && (colors[i][j-1].p !=16) && (colors[i+1][j-1].p != 16)*/){
         printf("\n Vous ne pouvez pas vous déplacer\n");
         b= bp; a=ap;
@@ -49,7 +49,7 @@ int v=1,ap,bp,fp,gp, ver, ver1, block, block1, obs,obs1, fin;
     }while(ver1!=2 );
          block1=bloquer(&i, &j, colors);
           obs=check_obstacles(i, j, *f, *g,  colors);
-      choisirPion(&i, &j, &f, &g, Pion colors[ROWS][ROWS]);
+      choisirPion(&i, &j, &f, &g,  colors);
        if(obs==0/*(colors[i-1][j+1].p != 16) && (colors[i][j+i].p !=16) && (colors[i+1][j+1].p != 16)*/){
         
         printf("\n Vous ne pouvez pas vous déplacer\n");
