@@ -29,7 +29,7 @@ void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
                conditions2(&a,&b,i,j);
       }
       /*if(a==0){
-        printf("\nLe joueur 2 à remporter la manche\n");
+        printf("\nLe joueur 2 à remporté la manche\n");
         score2++;
         manche=1;*/
       
