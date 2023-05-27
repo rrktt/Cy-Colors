@@ -55,7 +55,7 @@ void move_total(int *a1, int* a2, Pion colors[ROWS][ROWS]){
          }while(ver1!=2 || cond==0);
          block1=bloquer(&i, &j, colors);
          obs=check_obstacles(i, j, f, g,  colors);
-         choisirPion(&i, &j, &f, &g,  colors);
+         //choisirPion(&i, &j, &f, &g,  colors);
          if(obs==0/*(colors[i-1][j+1].p != 16) && (colors[i][j+i].p !=16) && (colors[i+1][j+1].p != 16)*/){
         
          printf("\n Vous ne pouvez pas vous déplacer\n");
